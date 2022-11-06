@@ -15,6 +15,9 @@ Create your pages as class in Pages folder
 - Each page will use a layout and load component list
 - Each page will be generated as html page in docs folder, so don't miss to add in this folder all css/js dependances
 
+Create components used by your pages in Components folder
+- Each component will use views  
+
 # Example of use
 
 ## You homepage

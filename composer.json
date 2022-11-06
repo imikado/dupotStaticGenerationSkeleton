@@ -1,6 +1,7 @@
 {
     "name": "dupot/static-generation-skeleton",
     "type": "project",
+    "license": "LGPL-2.1",
     "autoload": {
         "psr-4": {
             "MyWebsite\\": "src/"

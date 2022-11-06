@@ -1,0 +1,18 @@
+{
+    "name": "vendor/your-webiste",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "MyWebsite\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "your name",
+            "email": "yourname@domain.com"
+        }
+    ],
+    "require": {
+        "dupot/static-generation-framework": "1.*.*"
+    }
+}

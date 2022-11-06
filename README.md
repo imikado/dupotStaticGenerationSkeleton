@@ -118,3 +118,29 @@ src/Components/Nav/nav.php
 
 </nav>
 ```
+
+## Generate script
+Last but not least: don't miss to fill in generation script your page class list
+
+``` php
+<?php
+
+use MyWebsite\Pages\HomePage;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$pagesList = [
+
+    new HomePage(),
+    //new OtherPage()
+
+];
+
+foreach ($pagesList as $pageLoop) {
+    print("Generate " . $pageLoop->getFilename() . "\n");
+    $pageLoop->generateTo(__DIR__ . '/../docs/');
+}
+
+```
+
+

@@ -1,5 +1,5 @@
 {
-    "name": "vendor/your-webiste",
+    "name": "dupot/static-generation-skeleton",
     "type": "project",
     "autoload": {
         "psr-4": {
@@ -8,8 +8,10 @@
     },
     "authors": [
         {
-            "name": "your name",
-            "email": "yourname@domain.com"
+            "name": "Michael Bertocchi",
+            "email": "imikado@gmail.com",
+            "homepage": "https://www.dupot.org",
+            "role": "Developer"
         }
     ],
     "require": {

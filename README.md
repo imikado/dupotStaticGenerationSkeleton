@@ -4,7 +4,15 @@ Skeleton to create a static-generation-framework website
 
 # Usage
 
-``` bash
+Installation
+
+```bash
+composer create-project dupot/static-generation-skeleton myWebsite
+```
+
+Generation
+
+```bash
 php src/generate.php
 ```
 
@@ -16,13 +24,16 @@ Create your pages as class in Pages folder
 - Each page will be generated as html page in docs folder, so don't miss to add in this folder all css/js dependances
 
 Create components used by your pages in Components folder
-- Each component will use views  
+
+- Each component will use views
 
 # Example of use
 
 ## You homepage
+
 src/Pages/HomePage.php
-``` php
+
+```php
 <?php
 
 namespace MyWebsite\Pages;
@@ -53,8 +64,10 @@ class HomePage extends PageAbstract implements PageInterface
 ```
 
 ## Your components included in your page
+
 src/Components/NavComponent.php
-``` php
+
+```php
 <?php
 
 namespace MyWebsite\Components;
@@ -90,10 +103,12 @@ class NavComponent extends ComponentAbstract implements ComponentInterface
 }
 
 ```
+
 view used by your component
 
 src/Components/Nav/nav.php
-``` php
+
+```php
 <nav class="navbar navbar-wrapper navbar-default navbar-fade is-transparent" role="navigation" aria-label="main navigation">
 
     <div class="navbar-brand">
@@ -120,9 +135,10 @@ src/Components/Nav/nav.php
 ```
 
 ## Generate script
+
 Last but not least: don't miss to fill in generation script your page class list
 
-``` php
+```php
 <?php
 
 use MyWebsite\Pages\HomePage;
@@ -142,5 +158,3 @@ foreach ($pagesList as $pageLoop) {
 }
 
 ```
-
-

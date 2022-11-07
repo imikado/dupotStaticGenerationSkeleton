@@ -13,8 +13,16 @@ composer create-project dupot/static-generation-skeleton myWebsite
 Generation
 
 ```bash
-php src/generate.php
+docker-compose exec web php src/generate.php
 ```
+
+Display the result
+
+```bash
+docker-compose up
+```
+
+Then open your browser on http://localhost/ url
 
 # How to use
 

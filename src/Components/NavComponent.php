@@ -4,6 +4,7 @@ namespace MyWebsite\Components;
 
 use Dupot\StaticGenerationFramework\Component\ComponentAbstract;
 use Dupot\StaticGenerationFramework\Component\ComponentInterface;
+use MyWebsite\Pages\HomePage;
 
 class NavComponent extends ComponentAbstract implements ComponentInterface
 {
@@ -18,7 +19,7 @@ class NavComponent extends ComponentAbstract implements ComponentInterface
     public function render(): string
     {
         $linkList = [
-            'Home' => 'index.html',
+            'Home' => HomePage::FILENAME,
 
         ];
 

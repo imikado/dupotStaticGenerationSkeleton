@@ -9,7 +9,12 @@ use MyWebsite\Components\NavComponent;
 
 class HomePage extends PageAbstract implements PageInterface
 {
-    protected $filename = 'index.html';
+    const FILENAME = 'index.html';
+
+    public function getFilename(): string
+    {
+        return self::FILENAME;
+    }
 
     public function render(): string
     {

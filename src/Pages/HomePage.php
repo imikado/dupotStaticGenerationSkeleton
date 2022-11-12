@@ -21,7 +21,7 @@ class HomePage extends PageAbstract implements PageInterface
         return $this->renderLayoutWithParamList(
             __DIR__ . '/layout/default.php',
             [
-                'nav' => new NavComponent($this->filename),
+                'nav' => new NavComponent($this->getFilename()),
                 'contentList' => [
                     new HomeWelcomeComponent(),
                 ]

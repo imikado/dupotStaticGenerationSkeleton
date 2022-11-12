@@ -53,14 +53,19 @@ use MyWebsite\Components\NavComponent;
 
 class HomePage extends PageAbstract implements PageInterface
 {
-    protected $filename = 'index.html';
+    const FILENAME = 'index.html';
+
+    public function getFilename(): string
+    {
+        return self::FILENAME;
+    }
 
     public function render(): string
     {
         return $this->renderLayoutWithParamList(
             __DIR__ . '/layout/default.php',
             [
-                'nav' => new NavComponent($this->filename),
+                'nav' => new NavComponent($this->getFilename()),
                 'contentList' => [
                     new HomeWelcomeComponent(),
                 ]
@@ -82,6 +87,7 @@ namespace MyWebsite\Components;
 
 use Dupot\StaticGenerationFramework\Component\ComponentAbstract;
 use Dupot\StaticGenerationFramework\Component\ComponentInterface;
+use MyWebsite\Pages\HomePage;
 
 class NavComponent extends ComponentAbstract implements ComponentInterface
 {
@@ -96,7 +102,7 @@ class NavComponent extends ComponentAbstract implements ComponentInterface
     public function render(): string
     {
         $linkList = [
-            'Home' => 'index.html',
+            'Home' => HomePage::FILENAME,
 
         ];
 
